@@ -96,7 +96,7 @@ function drawTouches(touches, eventType) {
     if (eventType != "touchend") {
       var opacity = pointMode ? 1 : 0.1;
 
-      var hue = (touchMap[touch.identifier] * 30) % 256;
+      var hue = ((touchMap[touch.identifier] * 30) + 1000) % 256;
       var lum = 60;
       if (enableForce && touch.force)
         lum = Math.round(touch.force / 20 * 67 + 34);
