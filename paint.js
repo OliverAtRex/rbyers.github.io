@@ -106,7 +106,7 @@ function drawTouches(touches, eventType) {
 
     // Outline ellipse on start/end
     if (eventType != "touchmove") {
-      context.strokeStyle = eventType == "touchstart" ? "black" : "grey";
+      context.strokeStyle = eventType == "touchstart" ? "green" : "yellow";
       context.lineWidth = 2;
       context.stroke();
     }
@@ -143,7 +143,7 @@ function getAdjustedRadius(radius, otherRadius) {
     radius = otherRadiusUndefined? 15 : otherRadius;
   }
     
-  if (radius > 100) {
+  if (radius > 90) {
     console.error("Got large radius: " + radius);
     radius = 100;
   }
