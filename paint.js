@@ -96,10 +96,10 @@ function drawTouches(touches, eventType) {
     if (eventType != "touchend") {
       var opacity = pointMode ? 1 : 0.1;
 
-      var hue = ((touchMap[touch.identifier] * 30) + 1000) % 256;
+      var hue = ((touchMap[touch.identifier] * 45) + 1067) % 256;
       var lum = 60;
       if (enableForce && touch.force)
-        lum = Math.round(touch.force / 20 * 67 + 34);
+        lum = Math.round(touch.force / 20 * 89 + 1);
       context.fillStyle = "hsla(" + hue + ",70%," + lum + "%, " + opacity + ")";
       context.fill();
     }
